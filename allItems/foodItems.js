@@ -53,8 +53,8 @@ router.patch('/:itemId', async(req,res)=>{
 // Delete a specific post
 router.delete('/:itemId', async(req,res)=>{
     try{
-        const remodeItem = await foodItem.remode({ _id: req.params.itemId})
-        res.json(remodeItem)
+        const removeItem = await foodItem.remove({ _id: req.params.itemId})
+        res.json(removeItem)
     } catch(error) {
         res.json({ message: error})
     }
